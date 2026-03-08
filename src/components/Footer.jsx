@@ -6,12 +6,10 @@ import { BookOpen, Github, Twitter, Linkedin, Mail } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="relative bg-white border-t border-gray-200">
-      {/* gradient background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white via-indigo-50/30 to-white" />
 
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          {/* BRAND */}
           <div>
             <Link href="/" className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 text-white shadow-md">
@@ -29,7 +27,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* PRODUCT */}
           <div>
             <h4 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">
               Product
@@ -56,7 +53,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* ACCOUNT */}
           <div>
             <h4 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">
               Account
@@ -89,7 +85,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* CONTACT / SOCIAL */}
           <div>
             <h4 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">
               Connect
@@ -131,7 +126,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* bottom bar */}
         <div className="mt-12 border-t border-gray-200 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-500">
             © {new Date().getFullYear()} BookNest. All rights reserved.

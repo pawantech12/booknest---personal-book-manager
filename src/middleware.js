@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 export function middleware(req) {
   const { pathname } = req.nextUrl;
 
-  // Allow login page
   if (pathname === "/login") {
     return NextResponse.next();
   }
@@ -15,7 +14,6 @@ export function middleware(req) {
       return NextResponse.redirect(new URL("/login", req.url));
     }
 
-    // DO NOT verify JWT here
     return NextResponse.next();
   }
 }

@@ -35,7 +35,6 @@ export default function SignupPage() {
   return (
     <section className="min-h-screen bg-gray-50 flex items-center justify-center px-6 py-12">
       <div className="w-full max-w-6xl grid lg:grid-cols-2 bg-white rounded-2xl shadow-xl overflow-hidden">
-        {/* LEFT SIDE - BRAND / INFO */}
         <div className="hidden lg:flex flex-col justify-between bg-gradient-to-br from-indigo-600 to-purple-600 p-10 text-white">
           <div>
             <div className="flex items-center gap-3">
@@ -63,7 +62,6 @@ export default function SignupPage() {
           </div>
         </div>
 
-        {/* RIGHT SIDE - SIGNUP FORM */}
         <div className="flex flex-col justify-center px-8 py-12 lg:px-12">
           <div className="mx-auto w-full max-w-md">
             {/* heading */}

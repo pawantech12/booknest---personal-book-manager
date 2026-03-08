@@ -25,12 +25,10 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
-      {/* subtle background */}
+    <section className="relative py-20 bg-white overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white via-indigo-50/40 to-white" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-sm font-semibold tracking-wider text-indigo-600 uppercase">
             How It Works
@@ -49,34 +47,28 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="mt-20 grid gap-12 lg:grid-cols-3">
+        <div className="mt-10 grid gap-12 lg:grid-cols-3">
           {steps.map((step, index) => (
             <div
               key={index}
               className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition hover:shadow-xl hover:-translate-y-1"
             >
-              {/* Step number */}
               <div className="absolute -top-5 left-8 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-md">
                 {index + 1}
               </div>
 
-              {/* Icon */}
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
                 <step.icon className="h-6 w-6" />
               </div>
 
-              {/* Title */}
               <h4 className="mt-6 text-lg font-semibold text-gray-900">
                 {step.title}
               </h4>
 
-              {/* Description */}
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
                 {step.description}
               </p>
 
-              {/* Hover bottom line */}
               <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-indigo-600 to-purple-600 transition-all duration-300 group-hover:w-full rounded-full"></div>
             </div>
           ))}

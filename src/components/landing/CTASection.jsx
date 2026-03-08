@@ -5,17 +5,12 @@ import { ArrowRight, BookOpen } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section className="relative overflow-hidden py-24">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600"></div>
-
-      {/* Decorative blur */}
-      <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-white/20 blur-3xl"></div>
-
+    <section className="relative overflow-hidden py-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 p-10 md:p-14 text-center shadow-xl">
+        {/* Card Container */}
+        <div className="rounded-3xl bg-white/20 backdrop-blur-xl border border-white/30 p-4 sm:p-10 md:p-14 text-center shadow-xl">
           {/* Icon */}
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 mb-6">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white/30 mb-6">
             <BookOpen className="h-7 w-7 text-white" />
           </div>
 
@@ -25,13 +20,13 @@ export default function CTASection() {
             <span className="block">Personal Reading Library Today</span>
           </h2>
 
-          {/* Description */}
-          <p className="mt-4 text-lg text-indigo-100 max-w-2xl mx-auto">
+          {/* Subtext */}
+          <p className="mt-4 text-lg text-white/90 max-w-2xl mx-auto">
             Organize your books, track your reading progress, and manage your
             entire collection in one clean and powerful dashboard.
           </p>
 
-          {/* CTA Buttons */}
+          {/* Buttons */}
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/signup"
@@ -43,14 +38,13 @@ export default function CTASection() {
 
             <Link
               href="/login"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/40 px-7 py-3 text-sm font-medium text-white hover:bg-white/10 transition"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/60 px-7 py-3 text-sm font-medium text-white hover:bg-white/10 transition"
             >
               Login
             </Link>
           </div>
 
-          {/* Trust line */}
-          <p className="mt-6 text-sm text-indigo-200">
+          <p className="mt-6 text-sm text-white/70">
             Free to start • No credit card required
           </p>
         </div>

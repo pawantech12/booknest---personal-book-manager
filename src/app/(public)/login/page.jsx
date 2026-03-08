@@ -23,7 +23,6 @@ export default function LoginPage() {
       if (res.data.success) {
         toast.success(res.data.message || "Login Successful");
 
-        // redirect after login
         router.push("/dashboard");
       } else {
         toast.error(res.data.message || "Login failed");
@@ -33,10 +32,9 @@ export default function LoginPage() {
     }
   };
   return (
-    <section className="min-h-screen bg-gray-50 flex items-center justify-center px-6 py-12">
+    <section className="min-h-screen bg-gray-50 flex items-center justify-center px-6 md:py-12 py-6">
       <div className="w-full max-w-6xl grid lg:grid-cols-2 bg-white rounded-2xl shadow-xl overflow-hidden">
-        {/* LEFT SIDE - BRAND / INFO */}
-        <div className="hidden lg:flex flex-col justify-between bg-gradient-to-br from-indigo-600 to-purple-600 p-10 text-white">
+        <div className="hidden lg:flex flex-col justify-between bg-gradient-to-br from-indigo-600 to-purple-600 p-10 max-sm:p-5 text-white">
           <div>
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20">
@@ -63,19 +61,15 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {/* RIGHT SIDE - LOGIN FORM */}
-        <div className="flex flex-col justify-center px-8 py-12 lg:px-12">
+        <div className="flex flex-col justify-center px-8 py-6 md:py-12 lg:px-12">
           <div className="mx-auto w-full max-w-md">
-            {/* heading */}
             <h2 className="text-2xl font-bold text-gray-900">Welcome Back</h2>
 
             <p className="mt-2 text-sm text-gray-600">
               Login to manage your personal book collection.
             </p>
 
-            {/* form */}
             <form className="mt-8 space-y-6" onSubmit={handleSubmit(onSubmit)}>
-              {/* email */}
               <div>
                 <label className="text-sm font-medium text-gray-700">
                   Email Address
@@ -96,7 +90,6 @@ export default function LoginPage() {
                 )}
               </div>
 
-              {/* password */}
               <div>
                 <label className="text-sm font-medium text-gray-700">
                   Password
@@ -117,7 +110,6 @@ export default function LoginPage() {
                 )}
               </div>
 
-              {/* remember + forgot */}
               <div className="flex items-center justify-between text-sm">
                 <label className="flex items-center gap-2 text-gray-600">
                   <input type="checkbox" className="rounded border-gray-300" />
@@ -132,7 +124,6 @@ export default function LoginPage() {
                 </Link>
               </div>
 
-              {/* login button */}
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -147,7 +138,6 @@ export default function LoginPage() {
               </button>
             </form>
 
-            {/* signup link */}
             <p className="mt-6 text-center text-sm text-gray-600">
               Don’t have an account?{" "}
               <Link

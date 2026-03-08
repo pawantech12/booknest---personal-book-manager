@@ -46,11 +46,7 @@ export default function DashboardLayout({ children }) {
   };
   return (
     <div className="flex h-full bg-gray-50">
-      {/* SIDEBAR */}
       <div>
-        {/* MOBILE TOPBAR */}
-
-        {/* MOBILE OVERLAY */}
         {open && (
           <div
             className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden"
@@ -58,13 +54,11 @@ export default function DashboardLayout({ children }) {
           />
         )}
 
-        {/* SIDEBAR */}
         <aside
           className={`fixed z-50 h-screen w-72 transform border-r border-gray-200 bg-white/90 backdrop-blur-xl p-6 transition-transform duration-300
         ${open ? "translate-x-0" : "-translate-x-full"}
         lg:translate-x-0 lg:static flex flex-col justify-between`}
         >
-          {/* MOBILE CLOSE */}
           <div className="flex items-center justify-between lg:hidden mb-6">
             <span className="text-sm font-semibold text-gray-900">Menu</span>
 
@@ -76,7 +70,6 @@ export default function DashboardLayout({ children }) {
             </button>
           </div>
 
-          {/* BRAND */}
           <Link
             href="/dashboard"
             className="flex items-center gap-3 mb-10 group"
@@ -91,7 +84,6 @@ export default function DashboardLayout({ children }) {
             </div>
           </Link>
 
-          {/* NAVIGATION */}
           <nav className="flex flex-col gap-2 text-sm">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -108,7 +100,6 @@ export default function DashboardLayout({ children }) {
                     : "text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
                 }`}
                 >
-                  {/* active indicator */}
                   {isActive && (
                     <span className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-r bg-indigo-600" />
                   )}
@@ -128,7 +119,6 @@ export default function DashboardLayout({ children }) {
             })}
           </nav>
 
-          {/* USER SECTION */}
           <div className="mt-auto pt-6 border-gray-200 border-t">
             <div className="flex items-center gap-3 mb-4">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
@@ -142,7 +132,6 @@ export default function DashboardLayout({ children }) {
               </div>
             </div>
 
-            {/* LOGOUT */}
             <button
               onClick={handleLogout}
               className="group flex w-full items-center gap-3 rounded-xl px-4 py-2 text-sm text-gray-600 hover:bg-red-50 hover:text-red-600 transition border border-gray-200"
@@ -156,7 +145,7 @@ export default function DashboardLayout({ children }) {
           </div>
         </aside>
       </div>
-      {/* PAGE CONTENT */}
+
       <main className="flex-1">
         <header className="flex items-center justify-between border-b bg-white px-5 py-4 lg:hidden">
           <Link href="/dashboard" className="flex items-center gap-2">

@@ -31,12 +31,10 @@ export default function ReadingStatusSection() {
   ];
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
-      {/* subtle background gradient */}
+    <section className="relative py-20 bg-white overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white via-indigo-50/20 to-white" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-sm font-semibold tracking-wider text-indigo-600 uppercase">
             Reading Workflow
@@ -55,37 +53,31 @@ export default function ReadingStatusSection() {
           </p>
         </div>
 
-        {/* Status Cards */}
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-10 grid gap-8 md:grid-cols-3">
           {statuses.map((status, index) => (
             <div
               key={index}
               className={`group relative rounded-2xl border border-gray-200 ${status.bg} p-8 shadow-sm transition hover:shadow-xl hover:-translate-y-1`}
             >
-              {/* icon */}
               <div
                 className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${status.color} text-white shadow-md`}
               >
                 <status.icon className="h-7 w-7" />
               </div>
 
-              {/* title */}
               <h4 className="mt-6 text-xl font-semibold text-gray-900">
                 {status.title}
               </h4>
 
-              {/* description */}
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
                 {status.description}
               </p>
 
-              {/* decorative hover border */}
               <div className="absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-indigo-200 transition"></div>
             </div>
           ))}
         </div>
 
-        {/* workflow connector line */}
         <div className="mt-12 hidden md:flex items-center justify-center">
           <div className="h-1 w-40 bg-gradient-to-r from-gray-300 via-indigo-400 to-green-400 rounded-full"></div>
         </div>

@@ -4,13 +4,11 @@ import { BookOpen, BookCheck, BookMarked } from "lucide-react";
 
 export default function DashboardPreview() {
   return (
-    <section className="relative overflow-hidden bg-white py-24">
-      {/* background gradient */}
+    <section className="relative overflow-hidden bg-white py-20">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white via-indigo-50/40 to-white" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* LEFT CONTENT */}
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
               Product Dashboard
@@ -29,7 +27,6 @@ export default function DashboardPreview() {
               organized without distractions.
             </p>
 
-            {/* features list */}
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-3">
                 <BookOpen className="h-5 w-5 text-indigo-600 mt-1" />
@@ -55,14 +52,10 @@ export default function DashboardPreview() {
             </div>
           </div>
 
-          {/* RIGHT SIDE DASHBOARD PREVIEW */}
           <div className="relative">
-            {/* glow background */}
             <div className="absolute -inset-6 rounded-3xl bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 opacity-40 blur-3xl" />
 
-            {/* dashboard container */}
             <div className="relative rounded-2xl border border-gray-200 bg-white shadow-xl p-6">
-              {/* dashboard header */}
               <div className="flex items-center justify-between border-b pb-4 mb-6">
                 <h4 className="text-sm font-semibold text-gray-800">
                   Your Reading Dashboard
@@ -73,7 +66,6 @@ export default function DashboardPreview() {
                 </span>
               </div>
 
-              {/* stats */}
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="rounded-lg bg-indigo-50 p-4 text-center">
                   <p className="text-lg font-semibold text-indigo-600">24</p>
@@ -91,7 +83,6 @@ export default function DashboardPreview() {
                 </div>
               </div>
 
-              {/* book list */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between rounded-lg border border-gray-100 p-3 hover:bg-gray-50 transition">
                   <span className="text-sm font-medium text-gray-700">
